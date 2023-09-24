@@ -5,8 +5,8 @@ public class AxisYRotater : MonoBehaviour
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _angle;
 
-    void Update()
+    private void Update()
     {
-       transform.Rotate(0,_angle*_rotationSpeed*Time.deltaTime,0);
+        transform.Rotate(0, _angle * _rotationSpeed * Time.deltaTime, 0);
     }
 }
