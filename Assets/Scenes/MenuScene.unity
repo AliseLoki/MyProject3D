@@ -571,7 +571,6 @@ GameObject:
   - component: {fileID: 668951744}
   - component: {fileID: 668951743}
   - component: {fileID: 668951742}
-  - component: {fileID: 668951745}
   m_Layer: 5
   m_Name: HealButton
   m_TagString: Untagged
@@ -643,14 +642,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 668951745}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 1
+      - m_Target: {fileID: 2011778830}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ChangeHealth
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -693,20 +692,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668951740}
   m_CullTransparentMesh: 1
---- !u!114 &668951745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668951740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b955b9769176d04ba0bc0ada9bc20f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _changeValue: 10
-  _player: {fileID: 2011778830}
 --- !u!1 &841521327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141303020}
   - component: {fileID: 1141303019}
+  - component: {fileID: 1141303021}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1126,7 +1112,19 @@ MonoBehaviour:
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1141303020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1149,6 +1147,20 @@ RectTransform:
   m_AnchoredPosition: {x: 46.18, y: 231.655}
   m_SizeDelta: {x: 252.36, y: 53.31}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1141303021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141303018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b22a89d40a989444bef2cc47811e764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 10
+  _player: {fileID: 2011778830}
 --- !u!1 &1381692827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1384,6 @@ GameObject:
   - component: {fileID: 1850334587}
   - component: {fileID: 1850334586}
   - component: {fileID: 1850334585}
-  - component: {fileID: 1850334588}
   m_Layer: 5
   m_Name: DamageButton
   m_TagString: Untagged
@@ -1444,14 +1455,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1850334588}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 1
+      - m_Target: {fileID: 2011778830}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ChangeHealth
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1494,20 +1505,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850334583}
   m_CullTransparentMesh: 1
---- !u!114 &1850334588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850334583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b955b9769176d04ba0bc0ada9bc20f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _changeValue: -10
-  _player: {fileID: 2011778830}
 --- !u!114 &2011778830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2077921564700576829, guid: 332b21a684312b34798ace98affe4eed, type: 3}
